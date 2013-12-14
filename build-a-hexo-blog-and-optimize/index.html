@@ -164,7 +164,7 @@ $ npm update</code></pre>
 <li>样式微调</li>
 <li>字体微调 [1]</li>
 </ul>
-<p>优化调整参考了：<br>[1] [jim-liu的优化版light theme] (<a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">https://github.com/LiuJi-Jim/hexo-theme-light</a>)<br>[2] [净土howiefh] (<a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">https://github.com/howiefh/howiefh.github.io/</a>)<br>[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
+<p>优化调整参考了：<br>[1] <a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">jim-liu的优化版light theme</a><br>[2] <a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">净土howiefh</a><br>[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
 <h2>其他</h2>
 <h3>源代码管理</h3>
 <p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>本博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
@@ -317,16 +317,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
+            } 
+    
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
 

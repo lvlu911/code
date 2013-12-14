@@ -4,7 +4,7 @@
   <subtitle><![CDATA[ABC: Always Be Coding.]]></subtitle>
   <link href="http://code.wileam.com/atom.xml" rel="self"/>
   <link href="http://code.wileam.com"/>
-  <updated>2013-12-14T14:44:29.346Z</updated>
+  <updated>2013-12-14T15:51:51.636Z</updated>
   <id>http://code.wileam.com/</id>
   <author>
     <name><![CDATA[Joanna Wu]]></name>
@@ -16,7 +16,7 @@
     <link href="http://code.wileam.com/build-a-hexo-blog-and-optimize/"/>
     <id>http://code.wileam.com/build-a-hexo-blog-and-optimize/</id>
     <published>2013-12-14T04:56:49.000Z</published>
-    <updated>2013-12-14T14:42:42.000Z</updated>
+    <updated>2013-12-14T15:51:11.000Z</updated>
     <content type="html"><![CDATA[<p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
 <p>折腾的成果就是你现在看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
@@ -100,7 +100,7 @@ $ npm update</code></pre>
 <li>样式微调</li>
 <li>字体微调 [1]</li>
 </ul>
-<p>优化调整参考了：<br>[1] [jim-liu的优化版light theme] (<a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">https://github.com/LiuJi-Jim/hexo-theme-light</a>)<br>[2] [净土howiefh] (<a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">https://github.com/howiefh/howiefh.github.io/</a>)<br>[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
+<p>优化调整参考了：<br>[1] <a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">jim-liu的优化版light theme</a><br>[2] <a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">净土howiefh</a><br>[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
 <h2>其他</h2>
 <h3>源代码管理</h3>
 <p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>本博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
@@ -140,7 +140,7 @@ $ npm update</code></pre>
     <link href="http://code.wileam.com/markdown-syntax/"/>
     <id>http://code.wileam.com/markdown-syntax/</id>
     <published>2013-12-10T17:12:44.000Z</published>
-    <updated>2013-12-14T14:43:56.000Z</updated>
+    <updated>2013-12-14T15:04:38.000Z</updated>
     <content type="html"><![CDATA[<p>Markdown学习练习笔记/兼文档</p>
 <h2>哲学 philosophy</h2>
 <p>咳咳。简单说就是“易读”，“易写”。深得我心呀。</p>
@@ -212,17 +212,17 @@ $ npm update</code></pre>
 <p><img src="../uploads/avatar.jpg" alt="Avatar" title="Optional title"></p>
 <h3>参考式</h3>
 <pre><code><span class="comment">!</span>[<span class="comment">Avatar</span>-<span class="comment">gavatar</span>]<span class="title">[</span><span class="comment">3</span>]
-<span class="comment">!</span>[<span class="comment">Avatar</span>-<span class="comment">reading</span>]<span class="title">[</span><span class="comment">4</span>]
-<span class="title">[</span><span class="comment">3</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">1"</span>
-<span class="title">[</span><span class="comment">4</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>-<span class="comment">reading</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">reading"</code></pre>
-<p><img src="../uploads/avatar.jpg" alt="Avatar-gavatar" title="(optional)avatar-1"><br><img src="../uploads/avatar-reading.jpg" alt="Avatar-reading" title="(optional)avatar-reading"></p>
+<span class="title">[</span><span class="comment">3</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">1"</code></pre>
+<p><img src="../uploads/avatar.jpg" alt="Avatar-gavatar" title="(optional)avatar-1"></p>
+<p>目前markdown还不能更改大小，如果需要设置宽高需要写html \<img\>代码。</p>
 <h2>其他</h2>
 <h3>电子邮件 email</h3>
 <pre><code><span class="tag">&lt;<span class="title">abc@gmail.com</span>&gt;</span></code></pre>
-<p><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x61;&#98;&#x63;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x61;&#98;&#x63;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p><a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x61;&#x62;&#x63;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#x62;&#x63;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <h3>反斜杠</h3>
 <pre><code><span class="command">\*</span>我就是想显示星号不想斜体<span class="command">\*</span></code></pre>
 <p>*我就是想显示星号不想斜体*</p>
+<hr>
 <p>reference: <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a><br>本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md</a></p>
 ]]></content>
     <category scheme="http://code.wileam.com/tags/markdown/" term="markdown"/>

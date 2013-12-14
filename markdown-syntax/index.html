@@ -152,17 +152,17 @@
 <p><img src="../uploads/avatar.jpg" alt="Avatar" title="Optional title"></p>
 <h3>参考式</h3>
 <pre><code><span class="comment">!</span>[<span class="comment">Avatar</span>-<span class="comment">gavatar</span>]<span class="title">[</span><span class="comment">3</span>]
-<span class="comment">!</span>[<span class="comment">Avatar</span>-<span class="comment">reading</span>]<span class="title">[</span><span class="comment">4</span>]
-<span class="title">[</span><span class="comment">3</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">1"</span>
-<span class="title">[</span><span class="comment">4</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>-<span class="comment">reading</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">reading"</code></pre>
-<p><img src="../uploads/avatar.jpg" alt="Avatar-gavatar" title="(optional)avatar-1"><br><img src="../uploads/avatar-reading.jpg" alt="Avatar-reading" title="(optional)avatar-reading"></p>
+<span class="title">[</span><span class="comment">3</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">1"</code></pre>
+<p><img src="../uploads/avatar.jpg" alt="Avatar-gavatar" title="(optional)avatar-1"></p>
+<p>目前markdown还不能更改大小，如果需要设置宽高需要写html \<img\>代码。</p>
 <h2>其他</h2>
 <h3>电子邮件 email</h3>
 <pre><code><span class="tag">&lt;<span class="title">abc@gmail.com</span>&gt;</span></code></pre>
-<p><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x61;&#98;&#x63;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x61;&#98;&#x63;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p><a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x61;&#x62;&#x63;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#x62;&#x63;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <h3>反斜杠</h3>
 <pre><code><span class="command">\*</span>我就是想显示星号不想斜体<span class="command">\*</span></code></pre>
 <p>*我就是想显示星号不想斜体*</p>
+<hr>
 <p>reference: <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a><br>本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md</a></p>
 
       
@@ -289,16 +289,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
+            } 
+    
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
 
