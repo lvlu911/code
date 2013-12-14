@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo搭建静态博客以及主题优化 | Joanna's coding blog</title>
+  <title>hexo搭建静态博客以及优化 | Joanna's coding blog</title>
   <meta name="author" content="Joanna Wu">
   
   <meta name="description" content="Joanna's coding blog">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="hexo搭建静态博客以及主题优化"/>
+  <meta property="og:title" content="hexo搭建静态博客以及优化"/>
   <meta property="og:site_name" content="Joanna's coding blog"/>
 
   
@@ -75,14 +75,14 @@
       
       
   
-    <h1 class="title">hexo搭建静态博客以及主题优化</h1>
+    <h1 class="title">hexo搭建静态博客以及优化</h1>
   
 
     </header>
     <div class="entry">
       
         <p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
-<p>折腾的成果就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
+<p>折腾的成果就是你现在看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
 <h2>建站流程</h2>
 <h3>1. 安装node.js以及git</h3>
@@ -99,7 +99,7 @@
 </ul>
 <p>自定义域名</p>
 <p>如果你用自定义域名的话，github pages需要你建立一个名称为CNAME的文件，里面放入你的域名地址。如我的<a href="https://github.com/wileam/code/blob/gh-pages/CNAME" target="_blank">CNAME文件</a>.</p>
-<p>因为每次deploy的时候hexo都会重新生成文件，所以直接加在github是不好使的，<strong>这个文件需要放在<blog>/source文件夹根目录下。</strong></p>
+<p>因为每次deploy的时候hexo都会重新生成文件，所以直接加在github是不好使的，<strong>这个文件需要放在 hexo folder/source文件夹根目录下。</strong></p>
 <h4>3.2 hexo配置deploy信息：</h4>
 <p>修改在blog根目录下的_config.yml，添加repo地址：</p>
 <pre><code><span class="method">deploy:</span>
@@ -152,21 +152,26 @@ $ npm update</code></pre>
 <li>关于 about me [1]</li>
 <li>日历 calendar [2]</li>
 <li>返回页面顶部 Scrolltop [2]</li>
-<li>微博秀 weibo show<br>见微博开放平台：<a href="http://app.weibo.com/tool/weiboshow" target="_blank">http://app.weibo.com/tool/weiboshow</a></li>
+<li>微博秀 weibo show [3]</li>
 </ul>
 <h3>其他调整</h3>
 <ul>
 <li>去掉addthis和Disqus</li>
-<li>添加多说</li>
-<li>添加百度统计和Google Analytics<br>原先一直用GA然后现在两个都用是打算对比一下。。</li>
-<li>添加social icons</li>
+<li>添加多说 [1]</li>
+<li>添加百度统计 [1] 和Google Analytics<br>原先一直用GA然后现在两个都用是打算对比一下。。</li>
+<li>自动附上博客文章源码的github地址</li>
+<li><strong>添加social icons</strong></li>
 <li>样式微调</li>
-<li>字体微调</li>
+<li>字体微调 [1]</li>
 </ul>
-<p>优化调整参考了：<br>[1] <a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">jim-liu的优化版light theme</a><br>[2] <a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">净土howiefh</a></p>
+<p>优化调整参考了：<br>[1] [jim-liu的优化版light theme] (<a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">https://github.com/LiuJi-Jim/hexo-theme-light</a>)<br>[2] [净土howiefh] (<a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">https://github.com/howiefh/howiefh.github.io/</a>)<br>[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
 <h2>其他</h2>
 <h3>源代码管理</h3>
 <p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>本博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
+<h3>发布显示更多</h3>
+<p>在你觉得适合的位置插入</p>
+<pre><code><span class="comment">&lt;!-- more --&gt;</span></code></pre>
+<p>就会将之前的部分生成摘要。点击”阅读全文“才会看到全文。</p>
 <h3>YAML</h3>
 <p>hexo文章的头部文件是用<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">YAML</a>来写的，比如文章要同时标记多个tags，就需要用</p>
 <pre><code><span class="attribute">tags</span>: <span class="string">[tag1, tag2]</span></code></pre>
@@ -215,7 +220,7 @@ $ npm update</code></pre>
 
 
 <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread" data-title="hexo搭建静态博客以及主题优化" data-url="http://code.wileam.com/build-a-hexo-blog-and-optimize/"></div>
+<div class="ds-thread" data-title="hexo搭建静态博客以及优化" data-url="http://code.wileam.com/build-a-hexo-blog-and-optimize/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"wileamcode"};
 (function() {
@@ -312,16 +317,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
+            } 
+    
+            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
 
@@ -361,6 +366,8 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
   
     <li><a href="/tags/syntax/">syntax</a><small>1</small></li>
   
+    <li><a href="/tags/translate/">translate</a><small>1</small></li>
+  
   </ul>
 </div>
 
@@ -371,7 +378,7 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
   <ul class="entry">
     
       <li>
-        <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及主题优化</a>
+        <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及优化</a>
       </li>
     
       <li>
