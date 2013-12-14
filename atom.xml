@@ -4,7 +4,7 @@
   <subtitle><![CDATA[ABC: Always Be Coding.]]></subtitle>
   <link href="http://code.wileam.com/atom.xml" rel="self"/>
   <link href="http://code.wileam.com"/>
-  <updated>2013-12-14T03:07:18.573Z</updated>
+  <updated>2013-12-14T09:59:10.411Z</updated>
   <id>http://code.wileam.com/</id>
   <author>
     <name><![CDATA[Joanna Wu]]></name>
@@ -12,31 +12,155 @@
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
+    <title type="html"><![CDATA[hexo搭建静态博客以及主题优化]]></title>
+    <link href="http://code.wileam.com/build-a-hexo-blog-and-optimize/"/>
+    <id>http://code.wileam.com/build-a-hexo-blog-and-optimize/</id>
+    <published>2013-12-14T04:56:49.000Z</published>
+    <updated>2013-12-14T09:57:56.000Z</updated>
+    <content type="html"><![CDATA[<p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
+<p>折腾的成果demo就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
+<p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
+<h2>建站流程</h2>
+<h3>1. 安装node.js以及git</h3>
+<a id="more"></a>
+
+<h3>2. 安装hexo</h3>
+<pre><code>   <span class="comment">$</span> <span class="comment">npm</span> <span class="comment">install</span> <span class="literal">-</span><span class="comment">g</span> <span class="comment">hexo</code></pre>
+<h3>3. 部署github pages</h3>
+<h4>3.1 github建立repo</h4>
+<p>以下二选一。<br>- 建立一个 username.github.com 的repo，username为你的github用户名，每个用户只能有一个这样的repo，则直接发布到master分支即可。<br>- 建立一个项目repo，发布的branch是gh-pages.</p>
+<p>自定义域名</p>
+<p>如果你用自定义域名的话，github pages需要你建立一个名称为CNAME的文件，里面放入你的域名地址。如我的<a href="https://github.com/wileam/code/blob/gh-pages/CNAME" target="_blank">CNAME文件</a>.</p>
+<p>因为每次deploy的时候hexo都会重新生成文件，所以直接加在github是不好使的，<strong>这个文件需要放在<blog>/source文件夹根目录下。</strong></p>
+<h4>3.2 hexo配置deploy信息：</h4>
+<p>修改在blog根目录下的_config.yml，添加repo地址：</p>
+<pre><code><span class="method">deploy:</span>
+  <span class="method">type:</span> github
+  <span class="method">repository:</span> <span class="method">https:</span>//github.com/[username]/[reponame].git</code></pre>
+<p>References:<br>[1]. <a href="https://help.github.com/categories/20/articles" target="_blank">github pages help</a><br>[2]. <a href="http://zespia.tw/hexo/docs/deployment.html" target="_blank">hexo Deployment Docs</a><br>[3]. 想用BAE的可以看这篇：<a href="http://jimliu.net/2013/11/20/use-hexo-on-bae/" target="_blank">在BAE上使用hexo搭建博客</a></p>
+<h3>4. hexo基本操作</h3>
+<ul>
+<li><p>新建博客</p>
+<pre><code>$ hexo init <span class="tag">&lt;<span class="title">folder</span>&gt;</span></code></pre>
+</li>
+</ul>
+<p>在<folder>目录下就建立了你的hexo blog.</p>
+<ul>
+<li><p>新建文章</p>
+<pre><code>$ hexo init <span class="tag">&lt;<span class="title">title</span>&gt;</span></code></pre>
+</li>
+</ul>
+<p>会在source/_post新建一个名为 title.md 的文章，用喜欢的编辑器打开就可以用markdown语法写文章了。</p>
+<ul>
+<li><p>server</p>
+<pre><code><span class="variable">$ </span>hexo server</code></pre>
+</li>
+</ul>
+<p>就可以在 localhost:4000/ 查看你的博客。</p>
+<ul>
+<li><p>generate &amp; deploy</p>
+<pre><code><span class="variable">$ </span>hexo generate
+<span class="variable">$ </span>hexo deploy</code></pre>
+</li>
+</ul>
+<h2>折腾</h2>
+<h3>插件 plugins</h3>
+<ul>
+<li>rss生成 hexo-generator-feed</li>
+<li>sitemap hexo-generator-sitemap</li>
+</ul>
+<p>添加插件的基本操作是：</p>
+<pre><code>$ npm install <span class="tag">&lt;<span class="title">plugin-name</span>&gt;</span> --save
+$ npm update</code></pre>
+<p>然后修改blog根目录下的_config.yml，添加：</p>
+<pre><code><span class="comment">plugins:</span>
+<span class="literal">-</span> <span class="comment">plugin</span>-<span class="comment">name</code></pre>
+<p>插件部分详见：<a href="https://github.com/tommy351/hexo/wiki/Plugins" target="_blank">https://github.com/tommy351/hexo/wiki/Plugins</a></p>
+<h3>组件 widgets</h3>
+<ul>
+<li>关于 about me</li>
+<li>日历 calendar</li>
+<li>返回页面顶部 Scrolltop</li>
+<li>微博秀 weibo show</li>
+</ul>
+<h3>其他调整</h3>
+<ul>
+<li>去掉addthis和Disqus</li>
+<li>添加多说</li>
+<li>添加百度统计和Google Analytics<br>原先一直用GA然后现在两个都用是打算对比一下。。</li>
+<li>添加social icons</li>
+<li>样式微调</li>
+<li>字体微调</li>
+</ul>
+<h2>其他</h2>
+<h3>源代码管理</h3>
+<p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
+<h3>YAML</h3>
+<p>hexo文章的头部文件是用<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">YAML</a>来写的，比如文章要同时标记多个tags，就需要用</p>
+<pre><code><span class="attribute">tags</span>: <span class="string">[tag1, tag2]</span></code></pre>
+<p>或者</p>
+<pre><code><span class="comment">tags:</span>
+<span class="literal">-</span> <span class="comment">tag1</span>
+<span class="literal">-</span> <span class="comment">tag2</code></pre>
+<p>这样的语法来写，详见YAML的<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">wikipedia</a>.</p>
+<h3>ejs和stylus</h3>
+<p>hexo是用的ejs和stylus。同样如果习惯用LESS之类也可以装相应的plugins.</p>
+<p>ejs是embedded javascript，从js文件中抽取出html结构，使代码结构清晰简洁易读。(其实我还不太明白所以没怎么改ejs……)<br>文档存备用：<a href="https://code.google.com/p/embeddedjavascript/w/list" target="_blank">https://code.google.com/p/embeddedjavascript/w/list</a></p>
+<p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。<br>同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
+<h3>markdown</h3>
+<p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown%E8%AF%AD%E6%B3%95/">markdown语法</a></p>
+<hr>
+<p>呼，就算写完了吧。markdown写blog还真是不一样，不过我喜欢。Hope you enjoy it as well. ^ ^</p>
+]]></content>
+    <category scheme="http://code.wileam.com/tags/hexo/" term="hexo"/>
+    <category scheme="http://code.wileam.com/tags/blog/" term="blog"/>
+    <category scheme="http://code.wileam.com/tags/markdown/" term="markdown"/>
+    <category scheme="http://code.wileam.com/tags/github pages/" term="github pages"/>
+    <category scheme="http://code.wileam.com/categories/coding/" term="coding"/>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[markdown语法]]></title>
-    <link href="http://code.wileam.com/markdown语法/"/>
-    <id>http://code.wileam.com/markdown语法/</id>
+    <link href="http://code.wileam.com/markdown-syntax/"/>
+    <id>http://code.wileam.com/markdown-syntax/</id>
     <published>2013-12-10T17:12:44.000Z</published>
-    <updated>2013-12-12T16:49:50.000Z</updated>
+    <updated>2013-12-14T09:58:03.000Z</updated>
     <content type="html"><![CDATA[<p>Markdown学习练习笔记/兼文档</p>
+<h2>哲学 philosophy</h2>
+<p>咳咳。简单说就是“易读”，“易写”。深得我心呀。</p>
+<blockquote>
+<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.<br><a id="more"></a></p>
+</blockquote>
 <h2>标题 HEADERS</h2>
 <h3>一级标题 H1</h3>
-<pre><code><span class="header"># 一级标题 H1</span>
+<pre><code><span class="header"># 这是一个一级标题 header1</span>
 
-<span class="header">一级标题第二种写法 H1
+<span class="header">这还是一个一级标题 header1
 ===========</span></code></pre>
+<h1>这是一个一级标题 header1</h1>
 <h3>二级标题 H2</h3>
-<pre><code><span class="comment">##</span> <span class="comment">二级标题</span> <span class="comment">H2</span>
+<pre><code><span class="comment">##</span> <span class="comment">这是一个二级标题</span> <span class="comment">H2</span>
 
-<span class="comment">二级标题第二种写法</span> <span class="comment">H2</span>
-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span>
-
-<span class="comment">###</span> <span class="comment">H3</code></pre>
+<span class="comment">这还是一个二级标题</span> <span class="comment">H2</span>
+<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></code></pre>
+<h2>这是一个二级标题 H2</h2>
+<h3>三级-六级标题</h3>
+<pre><code><span class="preprocessor">### 三级标题 H3</span>
+……
+<span class="preprocessor">###### 六级标题 H6</span></code></pre>
+<p>只有一种写法了。</p>
 <h3>引用 Blockquotes</h3>
 <pre><code>&gt; <span class="variable">Smile</span>, breathe <span class="keyword">and</span> go slowly.</code></pre>
+<blockquote>
+<p>Smile, breathe and go slowly.</p>
+</blockquote>
 <h2>列表 LIST</h2>
 <h3>无序列表 Unordered lists</h3>
 <pre><code><span class="literal">-</span> <span class="comment">第一点</span>
 <span class="literal">-</span> <span class="comment">第二点</code></pre>
+<ul>
+<li>第一点</li>
+<li>第二点</li>
+</ul>
 <h3>有序列表 Ordered lists</h3>
 <pre><code><span class="bullet">3. </span>第一点
 <span class="bullet">2. </span>第二点</code></pre>
@@ -45,13 +169,25 @@
 <li>第一点</li>
 <li>第二点</li>
 </ol>
+<h2>链接</h2>
+<pre><code><span class="link_label">[曼珠沙华]</span>(<span class="link_url">http://blog.wileam.com/ "生活博客"</span>)</code></pre>
+<p><a href="http://blog.wileam.com/" title="生活博客" target="_blank">曼珠沙华</a></p>
+<h2>代码块 CODE BLOCKS</h2>
+<p>缩进 4spaces/1Tab。</p>
+<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"span4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"span8"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h2>加粗/斜体</h2>
+<pre><code><span class="variable">**</span>加粗<span class="variable">**</span>
+<span class="variable">*斜</span>体*</code></pre>
+<p><strong>加粗</strong><br><em>斜体</em></p>
 <p>reference: <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a></p>
-<p><strong>题外话</strong><br>hexo支持markdown语法，而hexo本身是要求用<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">YAML</a>来写的，比如文章要同时标记多个tags，就需要用</p>
-<pre><code><span class="attribute">tags</span>: <span class="string">[tag1, tag2]</span></code></pre>
-<p>这样的语法来写，倒是和JSON有点儿像。 :)</p>
 ]]></content>
     <category scheme="http://code.wileam.com/tags/markdown/" term="markdown"/>
     <category scheme="http://code.wileam.com/tags/syntax/" term="syntax"/>
-    <category scheme="http://code.wileam.com/categories/syntax/" term="syntax"/>
+    <category scheme="http://code.wileam.com/categories/coding/" term="coding"/>
   </entry>
 </feed>

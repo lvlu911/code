@@ -79,17 +79,13 @@
     <div class="entry">
       
         <p><img src="/uploads/avatar-reading.jpg" width="180px" height="180px" alt=""></p>
-<p>小雪、Joanna。</p>
-<!-- <a href="https://www.facebook.com/Joanna.Wu.0326" target="_blank"><img src="/uploads/icon/facebook.png" width="28px" height="28px" alt=""></a> -->
-
+<p>小雪、Joanna。id wileam(since 1999).</p>
 <p>Contact:<br><img src="/uploads/email.gif" alt=""></p>
 <h2>New 2013 version/ English version ABOUT</h2>
 <p>Geek, coder, front-end developer.</p>
 <p>Based in Beijing, China.</p>
 <p>Enjoy coding, playing chess, soduko, rubik&#39;s cube…etc</p>
 <p>Enjoy reading, writing, travelling…etc</p>
-<p><a href="http://wileam.com" target="_BLANK" target="_blank">Homepage</a>(Coming soon…)<br><a href="http://blog.wileam.com" target="_BLANK" target="_blank">Life Blog</a></p></p>
-<p><a href="https://github.com/wileam/" target="_blank">Github</a>、<a href="http://www.douban.com/people/wileam/" target="_blank">douban</a>、<a href="https://weibo.com/wileam/" target="_blank">weibo</a></p></p>
 <h2>旧版/中文版关于</h2>
 <p>好奇，不安，生命力旺盛。害怕一眼望穿的生活。</p>
 <p>喜欢阅读，写字，旅行。<br>喜欢下棋，魔方，数独。</p>
@@ -151,6 +147,14 @@ var duoshuoQuery = {short_name:"wileamcode"};
     
     <li><img src="/uploads/email.gif"></li>
     
+    <ul class="social-icons">
+        <li><a href="https://github.com/wileam/" class="social_github"></a></li>
+        <li><a href="http://www.douban.com/people/wileam/" class="social_douban"></a></li>
+        <li><a href="http://weibo.com/wileam" class="social_weibo"></a></li>
+        <li><a href="http://www.pinterest.com/wileam/" class="social_pintrest"></a></li>
+        <li><a href="https://twitter.com/wileam" class="social_twitter"></a></li>
+        <li><a href="https://www.facebook.com/Joanna.Wu.0326" class="social_facebook"></a></li>
+    </ul>
   </ul>
 </div>
 
@@ -202,10 +206,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
+            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
+            } 
+    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown语法/' title='markdown语法'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
 
@@ -224,7 +234,7 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
   <h3 class="title">Categories</h3>
   <ul class="entry">
   
-    <li><a href="/categories/syntax/">syntax</a><small>1</small></li>
+    <li><a href="/categories/coding/">coding</a><small>2</small></li>
   
   </ul>
 </div>
@@ -235,7 +245,13 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
-    <li><a href="/tags/markdown/">markdown</a><small>1</small></li>
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
+    <li><a href="/tags/github pages/">github pages</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/markdown/">markdown</a><small>2</small></li>
   
     <li><a href="/tags/syntax/">syntax</a><small>1</small></li>
   
@@ -249,7 +265,11 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
   <ul class="entry">
     
       <li>
-        <a href="/markdown语法/">markdown语法</a>
+        <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及主题优化</a>
+      </li>
+    
+      <li>
+        <a href="/markdown-syntax/">markdown语法</a>
       </li>
     
   </ul>
@@ -283,6 +303,10 @@ var duoshuoQuery = {short_name:"wileamcode"};
   <ul class="entry">
     
     <li><a href="http://blog.wileam.com" target="_BLANK">Life Blog</a></li>
+    
+    <li><a href="http://jimliu.net/" target="_BLANK">jim-liu's blog</a></li>
+    
+    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf's blog</a></li>
     
   </ul>
 </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>markdown | Joanna's coding blog</title>
+  <title>markdown语法 | Joanna's coding blog</title>
   <meta name="author" content="Joanna Wu">
   
   <meta name="description" content="Joanna's coding blog">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="markdown语法"/>
   <meta property="og:site_name" content="Joanna's coding blog"/>
 
   
@@ -65,52 +65,7 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">markdown</h2>
-
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-12-14T04:56:49.000Z"><a href="/build-a-hexo-blog-and-optimize/">Dec 14 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及主题优化</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
-<p>折腾的成果demo就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
-<p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
-<h2>建站流程</h2>
-<h3>1. 安装node.js以及git</h3>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/build-a-hexo-blog-and-optimize/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -120,7 +75,7 @@
       
       
   
-    <h1 class="title"><a href="/markdown-syntax/">markdown语法</a></h1>
+    <h1 class="title">markdown语法</h1>
   
 
     </header>
@@ -130,16 +85,80 @@
 <h2>哲学 philosophy</h2>
 <p>咳咳。简单说就是“易读”，“易写”。深得我心呀。</p>
 <blockquote>
-<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.<br>
+<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.<br><a id="more"></a></p>
+</blockquote>
+<h2>标题 HEADERS</h2>
+<h3>一级标题 H1</h3>
+<pre><code><span class="header"># 这是一个一级标题 header1</span>
+
+<span class="header">这还是一个一级标题 header1
+===========</span></code></pre>
+<h1>这是一个一级标题 header1</h1>
+<h3>二级标题 H2</h3>
+<pre><code><span class="comment">##</span> <span class="comment">这是一个二级标题</span> <span class="comment">H2</span>
+
+<span class="comment">这还是一个二级标题</span> <span class="comment">H2</span>
+<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></code></pre>
+<h2>这是一个二级标题 H2</h2>
+<h3>三级-六级标题</h3>
+<pre><code><span class="preprocessor">### 三级标题 H3</span>
+……
+<span class="preprocessor">###### 六级标题 H6</span></code></pre>
+<p>只有一种写法了。</p>
+<h3>引用 Blockquotes</h3>
+<pre><code>&gt; <span class="variable">Smile</span>, breathe <span class="keyword">and</span> go slowly.</code></pre>
+<blockquote>
+<p>Smile, breathe and go slowly.</p>
+</blockquote>
+<h2>列表 LIST</h2>
+<h3>无序列表 Unordered lists</h3>
+<pre><code><span class="literal">-</span> <span class="comment">第一点</span>
+<span class="literal">-</span> <span class="comment">第二点</code></pre>
+<ul>
+<li>第一点</li>
+<li>第二点</li>
+</ul>
+<h3>有序列表 Ordered lists</h3>
+<pre><code><span class="bullet">3. </span>第一点
+<span class="bullet">2. </span>第二点</code></pre>
+<p><em>有趣的是这里前面的数字不重要，无论写什么数字都会生成从1开始递增的有序列表。比如我上面这个例子。会生成。</em></p>
+<ol>
+<li>第一点</li>
+<li>第二点</li>
+</ol>
+<h2>链接</h2>
+<pre><code><span class="link_label">[曼珠沙华]</span>(<span class="link_url">http://blog.wileam.com/ "生活博客"</span>)</code></pre>
+<p><a href="http://blog.wileam.com/" title="生活博客" target="_blank">曼珠沙华</a></p>
+<h2>代码块 CODE BLOCKS</h2>
+<p>缩进 4spaces/1Tab。</p>
+<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"span4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"span8"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h2>加粗/斜体</h2>
+<pre><code><span class="variable">**</span>加粗<span class="variable">**</span>
+<span class="variable">*斜</span>体*</code></pre>
+<p><strong>加粗</strong><br><em>斜体</em></p>
+<p>reference: <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a></p>
+
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/markdown-syntax/#more" class="more-link">阅读全文</a>
-          </div>
+  
+  <div class="categories">
+    <a href="/categories/coding/">coding</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/markdown/">markdown</a>, <a href="/tags/syntax/">syntax</a>
+  </div>
+
         
       
       <div class="clearfix"></div>
@@ -148,13 +167,22 @@
 </article>
 
 
-  
 
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="markdown语法" data-url="http://code.wileam.com/markdown-syntax/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wileamcode"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>markdown | Joanna's coding blog</title>
+  <title>hexo搭建静态博客以及主题优化 | Joanna's coding blog</title>
   <meta name="author" content="Joanna Wu">
   
   <meta name="description" content="Joanna's coding blog">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="hexo搭建静态博客以及主题优化"/>
   <meta property="og:site_name" content="Joanna's coding blog"/>
 
   
@@ -65,12 +65,7 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">markdown</h2>
-
-
-  
-    <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -80,7 +75,7 @@
       
       
   
-    <h1 class="title"><a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及主题优化</a></h1>
+    <h1 class="title">hexo搭建静态博客以及主题优化</h1>
   
 
     </header>
@@ -91,16 +86,112 @@
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
 <h2>建站流程</h2>
 <h3>1. 安装node.js以及git</h3>
+<a id="more"></a>
+
+<h3>2. 安装hexo</h3>
+<pre><code>   <span class="comment">$</span> <span class="comment">npm</span> <span class="comment">install</span> <span class="literal">-</span><span class="comment">g</span> <span class="comment">hexo</code></pre>
+<h3>3. 部署github pages</h3>
+<h4>3.1 github建立repo</h4>
+<p>以下二选一。<br>- 建立一个 username.github.com 的repo，username为你的github用户名，每个用户只能有一个这样的repo，则直接发布到master分支即可。<br>- 建立一个项目repo，发布的branch是gh-pages.</p>
+<p>自定义域名</p>
+<p>如果你用自定义域名的话，github pages需要你建立一个名称为CNAME的文件，里面放入你的域名地址。如我的<a href="https://github.com/wileam/code/blob/gh-pages/CNAME" target="_blank">CNAME文件</a>.</p>
+<p>因为每次deploy的时候hexo都会重新生成文件，所以直接加在github是不好使的，<strong>这个文件需要放在<blog>/source文件夹根目录下。</strong></p>
+<h4>3.2 hexo配置deploy信息：</h4>
+<p>修改在blog根目录下的_config.yml，添加repo地址：</p>
+<pre><code><span class="method">deploy:</span>
+  <span class="method">type:</span> github
+  <span class="method">repository:</span> <span class="method">https:</span>//github.com/[username]/[reponame].git</code></pre>
+<p>References:<br>[1]. <a href="https://help.github.com/categories/20/articles" target="_blank">github pages help</a><br>[2]. <a href="http://zespia.tw/hexo/docs/deployment.html" target="_blank">hexo Deployment Docs</a><br>[3]. 想用BAE的可以看这篇：<a href="http://jimliu.net/2013/11/20/use-hexo-on-bae/" target="_blank">在BAE上使用hexo搭建博客</a></p>
+<h3>4. hexo基本操作</h3>
+<ul>
+<li><p>新建博客</p>
+<pre><code>$ hexo init <span class="tag">&lt;<span class="title">folder</span>&gt;</span></code></pre>
+</li>
+</ul>
+<p>在<folder>目录下就建立了你的hexo blog.</p>
+<ul>
+<li><p>新建文章</p>
+<pre><code>$ hexo init <span class="tag">&lt;<span class="title">title</span>&gt;</span></code></pre>
+</li>
+</ul>
+<p>会在source/_post新建一个名为 title.md 的文章，用喜欢的编辑器打开就可以用markdown语法写文章了。</p>
+<ul>
+<li><p>server</p>
+<pre><code><span class="variable">$ </span>hexo server</code></pre>
+</li>
+</ul>
+<p>就可以在 localhost:4000/ 查看你的博客。</p>
+<ul>
+<li><p>generate &amp; deploy</p>
+<pre><code><span class="variable">$ </span>hexo generate
+<span class="variable">$ </span>hexo deploy</code></pre>
+</li>
+</ul>
+<h2>折腾</h2>
+<h3>插件 plugins</h3>
+<ul>
+<li>rss生成 hexo-generator-feed</li>
+<li>sitemap hexo-generator-sitemap</li>
+</ul>
+<p>添加插件的基本操作是：</p>
+<pre><code>$ npm install <span class="tag">&lt;<span class="title">plugin-name</span>&gt;</span> --save
+$ npm update</code></pre>
+<p>然后修改blog根目录下的_config.yml，添加：</p>
+<pre><code><span class="comment">plugins:</span>
+<span class="literal">-</span> <span class="comment">plugin</span>-<span class="comment">name</code></pre>
+<p>插件部分详见：<a href="https://github.com/tommy351/hexo/wiki/Plugins" target="_blank">https://github.com/tommy351/hexo/wiki/Plugins</a></p>
+<h3>组件 widgets</h3>
+<ul>
+<li>关于 about me</li>
+<li>日历 calendar</li>
+<li>返回页面顶部 Scrolltop</li>
+<li>微博秀 weibo show</li>
+</ul>
+<h3>其他调整</h3>
+<ul>
+<li>去掉addthis和Disqus</li>
+<li>添加多说</li>
+<li>添加百度统计和Google Analytics<br>原先一直用GA然后现在两个都用是打算对比一下。。</li>
+<li>添加social icons</li>
+<li>样式微调</li>
+<li>字体微调</li>
+</ul>
+<h2>其他</h2>
+<h3>源代码管理</h3>
+<p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
+<h3>YAML</h3>
+<p>hexo文章的头部文件是用<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">YAML</a>来写的，比如文章要同时标记多个tags，就需要用</p>
+<pre><code><span class="attribute">tags</span>: <span class="string">[tag1, tag2]</span></code></pre>
+<p>或者</p>
+<pre><code><span class="comment">tags:</span>
+<span class="literal">-</span> <span class="comment">tag1</span>
+<span class="literal">-</span> <span class="comment">tag2</code></pre>
+<p>这样的语法来写，详见YAML的<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">wikipedia</a>.</p>
+<h3>ejs和stylus</h3>
+<p>hexo是用的ejs和stylus。同样如果习惯用LESS之类也可以装相应的plugins.</p>
+<p>ejs是embedded javascript，从js文件中抽取出html结构，使代码结构清晰简洁易读。(其实我还不太明白所以没怎么改ejs……)<br>文档存备用：<a href="https://code.google.com/p/embeddedjavascript/w/list" target="_blank">https://code.google.com/p/embeddedjavascript/w/list</a></p>
+<p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。<br>同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
+<h3>markdown</h3>
+<p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown%E8%AF%AD%E6%B3%95/">markdown语法</a></p>
+<hr>
+<p>呼，就算写完了吧。markdown写blog还真是不一样，不过我喜欢。Hope you enjoy it as well. ^ ^</p>
 
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/build-a-hexo-blog-and-optimize/#more" class="more-link">阅读全文</a>
-          </div>
+  
+  <div class="categories">
+    <a href="/categories/coding/">coding</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/hexo/">hexo</a>, <a href="/tags/blog/">blog</a>, <a href="/tags/markdown/">markdown</a>, <a href="/tags/github pages/">github pages</a>
+  </div>
+
         
       
       <div class="clearfix"></div>
@@ -109,52 +200,22 @@
 </article>
 
 
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-12-10T17:12:44.000Z"><a href="/markdown-syntax/">Dec 11 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/markdown-syntax/">markdown语法</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Markdown学习练习笔记/兼文档</p>
-<h2>哲学 philosophy</h2>
-<p>咳咳。简单说就是“易读”，“易写”。深得我心呀。</p>
-<blockquote>
-<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/markdown-syntax/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
 
 
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="hexo搭建静态博客以及主题优化" data-url="http://code.wileam.com/build-a-hexo-blog-and-optimize/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wileamcode"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
