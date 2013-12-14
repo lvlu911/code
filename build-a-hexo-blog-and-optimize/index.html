@@ -82,14 +82,14 @@
     <div class="entry">
       
         <p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
-<p>折腾的成果demo就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
+<p>折腾的成果就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
 <h2>建站流程</h2>
 <h3>1. 安装node.js以及git</h3>
 <a id="more"></a>
 
 <h3>2. 安装hexo</h3>
-<pre><code>   <span class="comment">$</span> <span class="comment">npm</span> <span class="comment">install</span> <span class="literal">-</span><span class="comment">g</span> <span class="comment">hexo</code></pre>
+<pre><code><span class="comment">$</span> <span class="comment">npm</span> <span class="comment">install</span> <span class="literal">-</span><span class="comment">g</span> <span class="comment">hexo</code></pre>
 <h3>3. 部署github pages</h3>
 <h4>3.1 github建立repo</h4>
 <p>以下二选一。</p>
@@ -105,14 +105,14 @@
 <pre><code><span class="method">deploy:</span>
   <span class="method">type:</span> github
   <span class="method">repository:</span> <span class="method">https:</span>//github.com/[username]/[reponame].git</code></pre>
-<p>References:<br>[1]. <a href="https://help.github.com/categories/20/articles" target="_blank">github pages help</a><br>[2]. <a href="http://zespia.tw/hexo/docs/deployment.html" target="_blank">hexo Deployment Docs</a><br>[3]. 想用BAE的可以看这篇：<a href="http://jimliu.net/2013/11/20/use-hexo-on-bae/" target="_blank">在BAE上使用hexo搭建博客</a></p>
+<p>References:<br>[1] <a href="https://help.github.com/categories/20/articles" target="_blank">github pages help</a><br>[2] <a href="http://zespia.tw/hexo/docs/deployment.html" target="_blank">hexo Deployment Docs</a><br>[3] 想用BAE的可以看这篇：<a href="http://jimliu.net/2013/11/20/use-hexo-on-bae/" target="_blank">在BAE上使用hexo搭建博客</a></p>
 <h3>4. hexo基本操作</h3>
 <ul>
 <li><p>新建博客</p>
 <pre><code>$ hexo init <span class="tag">&lt;<span class="title">folder</span>&gt;</span></code></pre>
 </li>
 </ul>
-<p>在<folder>目录下就建立了你的hexo blog.</p>
+<p>在该目录下就建立了你的hexo blog.</p>
 <ul>
 <li><p>新建文章</p>
 <pre><code>$ hexo init <span class="tag">&lt;<span class="title">title</span>&gt;</span></code></pre>
@@ -131,9 +131,9 @@
 <span class="variable">$ </span>hexo deploy</code></pre>
 </li>
 </ul>
-<p>或者（这俩是完全一样的）</p>
-<pre><code>  <span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">generate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">deploy</span>
-  <span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">deploy</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">generate</code></pre>
+<p>或者（以下这俩效果是完全一样的）</p>
+<pre><code><span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">generate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">deploy</span>
+<span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">deploy</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">generate</code></pre>
 <h2>折腾</h2>
 <h3>插件 plugins</h3>
 <ul>
@@ -308,16 +308,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
+            } 
+    
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
 
