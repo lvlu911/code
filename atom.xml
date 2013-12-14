@@ -4,7 +4,7 @@
   <subtitle><![CDATA[ABC: Always Be Coding.]]></subtitle>
   <link href="http://code.wileam.com/atom.xml" rel="self"/>
   <link href="http://code.wileam.com"/>
-  <updated>2013-12-14T15:51:51.636Z</updated>
+  <updated>2013-12-14T15:57:04.734Z</updated>
   <id>http://code.wileam.com/</id>
   <author>
     <name><![CDATA[Joanna Wu]]></name>
@@ -16,8 +16,8 @@
     <link href="http://code.wileam.com/build-a-hexo-blog-and-optimize/"/>
     <id>http://code.wileam.com/build-a-hexo-blog-and-optimize/</id>
     <published>2013-12-14T04:56:49.000Z</published>
-    <updated>2013-12-14T15:51:11.000Z</updated>
-    <content type="html"><![CDATA[<p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
+    <updated>2013-12-14T15:56:52.000Z</updated>
+    <content type="html"><![CDATA[<p>首先，<em>这不是一篇详尽的完整的教程</em>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
 <p>折腾的成果就是你现在看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
 <h2>建站流程</h2>
@@ -140,10 +140,10 @@ $ npm update</code></pre>
     <link href="http://code.wileam.com/markdown-syntax/"/>
     <id>http://code.wileam.com/markdown-syntax/</id>
     <published>2013-12-10T17:12:44.000Z</published>
-    <updated>2013-12-14T15:04:38.000Z</updated>
+    <updated>2013-12-14T15:52:24.000Z</updated>
     <content type="html"><![CDATA[<p>Markdown学习练习笔记/兼文档</p>
 <h2>哲学 philosophy</h2>
-<p>咳咳。简单说就是“易读”，“易写”。深得我心呀。</p>
+<p>咳咳。简单说就是“易读”，“易写”。</p>
 <blockquote>
 <p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.<br><a id="more"></a></p>
 </blockquote>
@@ -218,7 +218,7 @@ $ npm update</code></pre>
 <h2>其他</h2>
 <h3>电子邮件 email</h3>
 <pre><code><span class="tag">&lt;<span class="title">abc@gmail.com</span>&gt;</span></code></pre>
-<p><a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x61;&#x62;&#x63;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#x62;&#x63;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x61;&#98;&#x63;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x61;&#98;&#x63;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
 <h3>反斜杠</h3>
 <pre><code><span class="command">\*</span>我就是想显示星号不想斜体<span class="command">\*</span></code></pre>
 <p>*我就是想显示星号不想斜体*</p>
