@@ -4,7 +4,7 @@
   <subtitle><![CDATA[ABC: Always Be Coding.]]></subtitle>
   <link href="http://code.wileam.com/atom.xml" rel="self"/>
   <link href="http://code.wileam.com"/>
-  <updated>2013-12-14T10:06:20.101Z</updated>
+  <updated>2013-12-14T10:25:15.428Z</updated>
   <id>http://code.wileam.com/</id>
   <author>
     <name><![CDATA[Joanna Wu]]></name>
@@ -16,7 +16,7 @@
     <link href="http://code.wileam.com/build-a-hexo-blog-and-optimize/"/>
     <id>http://code.wileam.com/build-a-hexo-blog-and-optimize/</id>
     <published>2013-12-14T04:56:49.000Z</published>
-    <updated>2013-12-14T09:57:56.000Z</updated>
+    <updated>2013-12-14T10:25:04.000Z</updated>
     <content type="html"><![CDATA[<p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
 <p>折腾的成果demo就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
@@ -78,10 +78,10 @@ $ npm update</code></pre>
 <p>插件部分详见：<a href="https://github.com/tommy351/hexo/wiki/Plugins" target="_blank">https://github.com/tommy351/hexo/wiki/Plugins</a></p>
 <h3>组件 widgets</h3>
 <ul>
-<li>关于 about me</li>
-<li>日历 calendar</li>
-<li>返回页面顶部 Scrolltop</li>
-<li>微博秀 weibo show</li>
+<li>关于 about me [1]</li>
+<li>日历 calendar [2]</li>
+<li>返回页面顶部 Scrolltop [2]</li>
+<li>微博秀 weibo show<br>见微博开放平台：<a href="http://app.weibo.com/tool/weiboshow" target="_blank">http://app.weibo.com/tool/weiboshow</a></li>
 </ul>
 <h3>其他调整</h3>
 <ul>
@@ -92,9 +92,10 @@ $ npm update</code></pre>
 <li>样式微调</li>
 <li>字体微调</li>
 </ul>
+<p>优化调整参考了：<br>[1] <a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">jim-liu的优化版light theme</a><br>[2] <a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">净土howiefh</a></p>
 <h2>其他</h2>
 <h3>源代码管理</h3>
-<p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
+<p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>本博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
 <h3>YAML</h3>
 <p>hexo文章的头部文件是用<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">YAML</a>来写的，比如文章要同时标记多个tags，就需要用</p>
 <pre><code><span class="attribute">tags</span>: <span class="string">[tag1, tag2]</span></code></pre>
@@ -108,9 +109,9 @@ $ npm update</code></pre>
 <p>ejs是embedded javascript，从js文件中抽取出html结构，使代码结构清晰简洁易读。(其实我还不太明白所以没怎么改ejs……)<br>文档存备用：<a href="https://code.google.com/p/embeddedjavascript/w/list" target="_blank">https://code.google.com/p/embeddedjavascript/w/list</a></p>
 <p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。<br>同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
 <h3>markdown</h3>
-<p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown%E8%AF%AD%E6%B3%95/">markdown语法</a></p>
+<p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown-syntax/">markdown语法</a></p>
 <hr>
-<p>呼，就算写完了吧。markdown写blog还真是不一样，不过我喜欢。Hope you enjoy it as well. ^ ^</p>
+<p>呼，就算写完了吧。markdown写blog还真是挺不一样的，不过我喜欢。Hope you enjoy it as well. ^ ^</p>
 ]]></content>
     <category scheme="http://code.wileam.com/tags/hexo/" term="hexo"/>
     <category scheme="http://code.wileam.com/tags/blog/" term="blog"/>
