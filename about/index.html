@@ -206,16 +206,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
+            } 
+    
+            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
             } 
     
 
@@ -304,7 +304,7 @@ var duoshuoQuery = {short_name:"wileamcode"};
     
     <li><a href="http://blog.wileam.com" target="_BLANK">Life Blog</a></li>
     
-    <li><a href="http://jimliu.net/" target="_BLANK">jim-liu's blog</a></li>
+    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu's blog</a></li>
     
     <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf's blog</a></li>
     
