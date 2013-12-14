@@ -4,7 +4,7 @@
   <subtitle><![CDATA[ABC: Always Be Coding.]]></subtitle>
   <link href="http://code.wileam.com/atom.xml" rel="self"/>
   <link href="http://code.wileam.com"/>
-  <updated>2013-12-14T11:59:09.490Z</updated>
+  <updated>2013-12-14T13:26:06.923Z</updated>
   <id>http://code.wileam.com/</id>
   <author>
     <name><![CDATA[Joanna Wu]]></name>
@@ -12,20 +12,11 @@
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
-    <title type="html"><![CDATA[douban-claim]]></title>
-    <link href="http://code.wileam.com/douban-claim/"/>
-    <id>http://code.wileam.com/douban-claim/</id>
-    <published>2013-12-14T11:58:23.000Z</published>
-    <updated>2013-12-14T11:58:48.000Z</updated>
-    <content type="html"><![CDATA[<p>doubanclaim68631276a9472c85</p>
-]]></content>
-  </entry>
-  <entry>
     <title type="html"><![CDATA[hexo搭建静态博客以及主题优化]]></title>
     <link href="http://code.wileam.com/build-a-hexo-blog-and-optimize/"/>
     <id>http://code.wileam.com/build-a-hexo-blog-and-optimize/</id>
     <published>2013-12-14T04:56:49.000Z</published>
-    <updated>2013-12-14T11:19:26.000Z</updated>
+    <updated>2013-12-14T13:25:55.000Z</updated>
     <content type="html"><![CDATA[<p>首先，<strong>这不是一篇详尽的完整的教程</strong>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
 <p>折腾的成果就是你看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
@@ -126,8 +117,12 @@ $ npm update</code></pre>
 <p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。<br>同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
 <h3>markdown</h3>
 <p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown-syntax/">markdown语法</a></p>
+<h3>疑似bug</h3>
+<p>如果更新了css文件，那么需要把public的css文件删除，然后</p>
+<pre><code><span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">deploy</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">generate</code></pre>
+<p>这样才会重新生成新的文件。我试了好几次都是这样，不知道是不是bug……</p>
 <hr>
-<p>呼，就算写完了吧。markdown写blog还真是挺不一样的，不过我喜欢。Hope you enjoy it as well. ^ ^</p>
+<p>本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/build-a-hexo-blog-and-optimize.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/build-a-hexo-blog-and-optimize.md</a></p>
 ]]></content>
     <category scheme="http://code.wileam.com/tags/hexo/" term="hexo"/>
     <category scheme="http://code.wileam.com/tags/blog/" term="blog"/>

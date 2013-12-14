@@ -181,8 +181,12 @@ $ npm update</code></pre>
 <p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。<br>同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
 <h3>markdown</h3>
 <p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown-syntax/">markdown语法</a></p>
+<h3>疑似bug</h3>
+<p>如果更新了css文件，那么需要把public的css文件删除，然后</p>
+<pre><code><span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">deploy</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">generate</code></pre>
+<p>这样才会重新生成新的文件。我试了好几次都是这样，不知道是不是bug……</p>
 <hr>
-<p>呼，就算写完了吧。markdown写blog还真是挺不一样的，不过我喜欢。Hope you enjoy it as well. ^ ^</p>
+<p>本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/build-a-hexo-blog-and-optimize.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/build-a-hexo-blog-and-optimize.md</a></p>
 
       
     </div>
@@ -308,22 +312,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Sat Dec 14 2013 19:58:23 GMT+0800"); 
+            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/douban-claim/' title='douban-claim'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
             } 
     
 
@@ -371,10 +369,6 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 <div class="widget tag">
   <h3 class="title">Recent Posts</h3>
   <ul class="entry">
-    
-      <li>
-        <a href="/douban-claim/">douban-claim</a>
-      </li>
     
       <li>
         <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及主题优化</a>

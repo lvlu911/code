@@ -267,22 +267,16 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
-            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
-                var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
-            } 
-    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
                 this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Sat Dec 14 2013 19:58:23 GMT+0800"); 
+            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/douban-claim/' title='douban-claim'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及主题优化'>" + day + "</a>";
             } 
     
 
@@ -330,10 +324,6 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 <div class="widget tag">
   <h3 class="title">Recent Posts</h3>
   <ul class="entry">
-    
-      <li>
-        <a href="/douban-claim/">douban-claim</a>
-      </li>
     
       <li>
         <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及主题优化</a>
