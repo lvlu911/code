@@ -6,7 +6,7 @@
   <title>markdown语法 | Joanna's coding blog</title>
   <meta name="author" content="Joanna Wu">
   
-  <meta name="description" content="Joanna's coding blog">
+  <meta name="description" content="Joanna's coding blog，">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 <body>
   <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">Joanna's coding blog</a></h1>
-  <h2><a href="/">ABC: Always Be Coding.</a></h2>
+  <h2><a href="/">WILEAM = WILdest+drEAM.</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
@@ -158,7 +158,7 @@
 <h2>其他</h2>
 <h3>电子邮件 email</h3>
 <pre><code><span class="tag">&lt;<span class="title">abc@gmail.com</span>&gt;</span></code></pre>
-<p><a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x61;&#98;&#x63;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x61;&#98;&#x63;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
+<p><a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x61;&#98;&#x63;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x61;&#98;&#x63;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h3>反斜杠</h3>
 <pre><code><span class="command">\*</span>我就是想显示星号不想斜体<span class="command">\*</span></code></pre>
 <p>*我就是想显示星号不想斜体*</p>
@@ -295,6 +295,12 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
+            var postdate = new Date("Sun Dec 22 2013 15:30:17 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/icon-font-intro/' title='Icon Font的好处及应用'>" + day + "</a>";
+            } 
+    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
@@ -314,27 +320,24 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/coding/">coding</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-
-  
-<div class="widget tag">
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
     <li><a href="/tags/blog/">blog</a><small>1</small></li>
   
+    <li><a href="/tags/css/">css</a><small>1</small></li>
+  
+    <li><a href="/tags/design/">design</a><small>1</small></li>
+  
     <li><a href="/tags/github pages/">github pages</a><small>1</small></li>
   
     <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
   
+    <li><a href="/tags/iconfont/">iconfont</a><small>1</small></li>
+  
     <li><a href="/tags/markdown/">markdown</a><small>2</small></li>
+  
+    <li><a href="/tags/openparty/">openparty</a><small>1</small></li>
   
     <li><a href="/tags/syntax/">syntax</a><small>1</small></li>
   
@@ -348,6 +351,10 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 <div class="widget tag">
   <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/icon-font-intro/">Icon Font的好处及应用</a>
+      </li>
     
       <li>
         <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及优化</a>

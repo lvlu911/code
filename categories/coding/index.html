@@ -6,7 +6,7 @@
   <title>coding | Joanna's coding blog</title>
   <meta name="author" content="Joanna Wu">
   
-  <meta name="description" content="Joanna's coding blog">
+  <meta name="description" content="Joanna's coding blog，">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,7 +49,7 @@
 <body>
   <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">Joanna's coding blog</a></h1>
-  <h2><a href="/">ABC: Always Be Coding.</a></h2>
+  <h2><a href="/">WILEAM = WILdest+drEAM.</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
@@ -245,6 +245,12 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
+            var postdate = new Date("Sun Dec 22 2013 15:30:17 GMT+0800"); 
+            if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
+                var day = postdate.getDate();
+                this.Days[day].innerHTML = "<a href='/icon-font-intro/' title='Icon Font的好处及应用'>" + day + "</a>";
+            } 
+    
             var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
@@ -264,27 +270,24 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/coding/">coding</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-
-  
-<div class="widget tag">
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
     <li><a href="/tags/blog/">blog</a><small>1</small></li>
   
+    <li><a href="/tags/css/">css</a><small>1</small></li>
+  
+    <li><a href="/tags/design/">design</a><small>1</small></li>
+  
     <li><a href="/tags/github pages/">github pages</a><small>1</small></li>
   
     <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
   
+    <li><a href="/tags/iconfont/">iconfont</a><small>1</small></li>
+  
     <li><a href="/tags/markdown/">markdown</a><small>2</small></li>
+  
+    <li><a href="/tags/openparty/">openparty</a><small>1</small></li>
   
     <li><a href="/tags/syntax/">syntax</a><small>1</small></li>
   
@@ -298,6 +301,10 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
 <div class="widget tag">
   <h3 class="title">Recent Posts</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/icon-font-intro/">Icon Font的好处及应用</a>
+      </li>
     
       <li>
         <a href="/build-a-hexo-blog-and-optimize/">hexo搭建静态博客以及优化</a>
