@@ -147,33 +147,46 @@ var duoshuoQuery = {short_name:"wileamcode"};
   </form>
 </div>
 
-  
-<div class="widget about_me">
-  <h3 class="title">ABOUT ME</h3>
-  <ul class="entry">
-    
-    <li><img width="150" title="avatar" src="/uploads/avatar.jpg" /></li>
-    
-    
-    <li><a href="/about" target="_BLANK">Joanna Wu(wileam)</a></li>
-    
-    <li>Smile, breathe & go slowly. ^_^</li>
-    
-    <li><br></li>
-    
-    <li><img src="/uploads/email.gif"></li>
-    
-    <ul class="social-icons">
-        <li><a href="https://github.com/wileam/" class="social_github"></a></li>
-        <li><a href="http://www.douban.com/people/wileam/" class="social_douban"></a></li>
-        <li><a href="http://weibo.com/wileam" class="social_weibo"></a></li>
-        <li><a href="http://www.pinterest.com/wileam/" class="social_pintrest"></a></li>
-        <li><a href="https://twitter.com/wileam" class="social_twitter"></a></li>
-        <li><a href="https://www.facebook.com/Joanna.Wu.0326" class="social_facebook"></a></li>
-    </ul>
-  </ul>
-</div>
+  <div id="octocard"></div>
+<script>
+OCTOCARD = {
+  // [required][string] Username.
+  name: 'wileam',
 
+  // [optional][string|Element]
+  // element or elementId, `octocard` as default.
+  element: 'octocard',
+
+  // [optional][string]
+  // Used module names, default is:
+  //   `base,details,stats,repos,contributions,orgs`.
+  // You can change the order or remove module if you don't want.
+  // modules: 'base,details,stats,repos,orgs,eventsStatis',
+
+  // [optional][number] Number of repos to be shown.
+  // `3` as default
+  // reposNum: 4,
+
+  // [optional][number]repos which will not be shown
+  // '' as default
+  reposIgnored: 'jcisoft.com,2013',
+
+  // [optional][number] Number of organizations to be shown.
+  // `-1` as default, represent showing all organizations.
+  // orgsNum: -1,
+
+  // [optional][string]url of jsonp api
+  // `http://octocard.info/api` as default.
+  // If your use your own octocard-server, change it.
+  // api: 'http://your-octocard-server.com/api',
+
+  // [optional][boolean]show footer or not
+  // 'false' as default
+  // noFooter: false
+};
+</script>
+<script src="http://nodejs.in/octocard/bin/octocard.js"></script>
+<br>
 
   <div class="widget tag">
     <h3 class="title">Calendar</h3>
@@ -222,10 +235,10 @@ var cale = new Calendar("idCalendar", {
         // } 
 
         
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
             var postdate = new Date("Sun Dec 22 2013 15:30:17 GMT+0800"); 
@@ -234,10 +247,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/icon-font-intro/' title='Icon Font的好处及应用'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Sat Dec 14 2013 12:56:49 GMT+0800"); 
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
 
