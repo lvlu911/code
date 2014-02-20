@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Icon Font的好处及应用 | Joanna's coding blog</title>
+  <title>Icon Font的好处及应用 | Joanna&#39;s coding blog</title>
   <meta name="author" content="Joanna Wu">
   
-  <meta name="description" content="Joanna's coding blog，">
+  <meta name="description" content="Joanna&#39;s coding blog，">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Icon Font的好处及应用"/>
-  <meta property="og:site_name" content="Joanna's coding blog"/>
+  <meta property="og:site_name" content="Joanna&#39;s coding blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Joanna's coding blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Joanna&#39;s coding blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -34,9 +34,9 @@
   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
   <meta name="msapplication-TileColor" content="#da532c" />
-  <!--howiefh scrolltop begin-->
+  <!-- 
   <SCRIPT type=text/javascript src="/js/scrolltop.js"></SCRIPT>
-  <!--howiefh scrolltop end-->
+   -->
   <!--howiefh calendar begin-->
   <SCRIPT type=text/javascript src="/js/calendar.js"></SCRIPT>
   <!--howiefh calendar end-->  
@@ -59,7 +59,7 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Joanna's coding blog</a></h1>
+  <h1><a href="/">Joanna&#39;s coding blog</a></h1>
   <h2><a href="/">WILEAM = WILdest+drEAM.</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -78,6 +78,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -93,9 +105,12 @@
     <div class="entry">
       
         <p>2013.12.21我在<a href="http://www.beijing-open-party.org/" target="_blank">Beijing Open Party</a>2013年的最后一期，2013嘉年华活动中做了一个小分享，主题就是Icon Font的好处及应用。</p>
-<p>现在把相关的demo和幻灯片也放在这里：<br><a id="more"></a></p>
+<p>现在把相关的demo和幻灯片也放在这里：
+<a id="more"></a></p>
 <p><a href="http://demo.wileam.com/iconfont.html" target="_blank">Demo</a></p>
-<p><a href="http://wileam.com/slides/iconfont.html" target="_blank">Slide</a><br>作为一名前端，自然想到能否用html来实现，尤其是涉及代码高亮的一些问题，如果用ppt可能会比较麻烦。<br>于是最后选择了revealjs来做幻灯片，效果也是还不错。</p>
+<p><a href="http://wileam.com/slides/iconfont.html" target="_blank">Slide</a>
+作为一名前端，自然想到能否用html来实现，尤其是涉及代码高亮的一些问题，如果用ppt可能会比较麻烦。
+于是最后选择了revealjs来做幻灯片，效果也是还不错。</p>
 <p><img src="../uploads/op-small.jpg" height="" width="600" alt="Open Party"></p>
 <p>分享这个主题，一是因为了解和使用之后确实觉得iconfont是一个非常好的值得推广使用的东西，尤其是在当前的扁平化的大趋势下，iconfont的单色甚至也不会成为一个很大的缺陷。二是和OP的团队也认识挺多年了，自己也作为听众参与了几次，很喜欢这样开放的理念。也很高兴自己也可以贡献话题与大家分享和交流。</p>
 <p>就酱紫，可以先demo感受一下，然后ppt看具体原理和实现方法。幻灯片上下左右快捷键操作，也支持手机或者触屏设备访问。</p>
@@ -233,10 +248,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Sat Feb 15 2014 17:22:01 GMT+0800"); 
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/front-end-interview/' title='一些前端面试题'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
             var postdate = new Date("Sun Dec 22 2013 15:30:17 GMT+0800"); 
@@ -245,10 +260,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/icon-font-intro/' title='Icon Font的好处及应用'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            var postdate = new Date("Sat Feb 15 2014 17:22:01 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/front-end-interview/' title='一些前端面试题'>" + day + "</a>";
             } 
     
 
@@ -316,9 +331,9 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
     
     <li><a href="http://blog.wileam.com" target="_BLANK">Life Blog</a></li>
     
-    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu's blog</a></li>
+    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu&#39;s blog</a></li>
     
-    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf's blog</a></li>
+    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf&#39;s blog</a></li>
     
     <li><a href="http://twinsant.com/" target="_BLANK">twinsant</a></li>
     

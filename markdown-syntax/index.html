@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>markdown语法 | Joanna's coding blog</title>
+  <title>markdown语法 | Joanna&#39;s coding blog</title>
   <meta name="author" content="Joanna Wu">
   
-  <meta name="description" content="Joanna's coding blog，">
+  <meta name="description" content="Joanna&#39;s coding blog，">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="markdown语法"/>
-  <meta property="og:site_name" content="Joanna's coding blog"/>
+  <meta property="og:site_name" content="Joanna&#39;s coding blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Joanna's coding blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Joanna&#39;s coding blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -34,9 +34,9 @@
   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
   <meta name="msapplication-TileColor" content="#da532c" />
-  <!--howiefh scrolltop begin-->
+  <!-- 
   <SCRIPT type=text/javascript src="/js/scrolltop.js"></SCRIPT>
-  <!--howiefh scrolltop end-->
+   -->
   <!--howiefh calendar begin-->
   <SCRIPT type=text/javascript src="/js/calendar.js"></SCRIPT>
   <!--howiefh calendar end-->  
@@ -59,7 +59,7 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Joanna's coding blog</a></h1>
+  <h1><a href="/">Joanna&#39;s coding blog</a></h1>
   <h2><a href="/">WILEAM = WILdest+drEAM.</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -78,6 +78,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -93,88 +105,91 @@
     <div class="entry">
       
         <p>Markdown学习练习笔记/兼文档</p>
-<h2>哲学 philosophy</h2>
+<h2 id="-philosophy">哲学 philosophy</h2>
 <p>咳咳。简单说就是“易读”，“易写”。</p>
 <blockquote>
-<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.<br><a id="more"></a></p>
+<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+<a id="more"></a></p>
 </blockquote>
-<h2>标题 HEADERS</h2>
-<h3>一级标题 H1</h3>
-<pre><code><span class="header"># 这是一个一级标题 header1</span>
+<h2 id="-headers">标题 HEADERS</h2>
+<h3 id="-h1">一级标题 H1</h3>
+<pre><code># 这是一个一级标题 header1
 
-<span class="header">这还是一个一级标题 header1
-===========</span></code></pre>
-<h3>二级标题 H2</h3>
-<pre><code><span class="comment">##</span> <span class="comment">这是一个二级标题</span> <span class="comment">H2</span>
+这还是一个一级标题 header1
+===========
+</code></pre><h3 id="-h2">二级标题 H2</h3>
+<pre><code>## 这是一个二级标题 H2
 
-<span class="comment">这还是一个二级标题</span> <span class="comment">H2</span>
-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span></code></pre>
-<h3>三级-六级标题</h3>
-<pre><code><span class="preprocessor">### 三级标题 H3</span>
+这还是一个二级标题 H2
+--------
+</code></pre><h3 id="-">三级-六级标题</h3>
+<pre><code>### 三级标题 H3
 ……
-<span class="preprocessor">###### 六级标题 H6</span></code></pre>
-<p>只有一种写法了。</p>
-<h2>引用 Blockquotes</h2>
-<pre><code>&gt; <span class="variable">Smile</span>, breathe <span class="keyword">and</span> go slowly.</code></pre>
-<blockquote>
+###### 六级标题 H6
+</code></pre><p>只有一种写法了。</p>
+<h2 id="-blockquotes">引用 Blockquotes</h2>
+<pre><code>&gt; Smile, breathe and go slowly.
+</code></pre><blockquote>
 <p>Smile, breathe and go slowly.</p>
 </blockquote>
-<h2>列表 LIST</h2>
-<h3>无序列表 Unordered lists</h3>
-<pre><code><span class="literal">-</span> <span class="comment">第一点</span>
-<span class="literal">-</span> <span class="comment">第二点</code></pre>
-<ul>
+<h2 id="-list">列表 LIST</h2>
+<h3 id="-unordered-lists">无序列表 Unordered lists</h3>
+<pre><code>- 第一点
+- 第二点
+</code></pre><ul>
 <li>第一点</li>
 <li>第二点</li>
 </ul>
-<h3>有序列表 Ordered lists</h3>
-<pre><code><span class="bullet">3. </span>第一点
-<span class="bullet">2. </span>第二点</code></pre>
-<p><em>有趣的是这里前面的数字不重要，无论写什么数字都会生成从1开始递增的有序列表。比如我上面这个例子。会生成。</em></p>
+<h3 id="-ordered-lists">有序列表 Ordered lists</h3>
+<pre><code>3. 第一点
+2. 第二点
+</code></pre><p><em>有趣的是这里前面的数字不重要，无论写什么数字都会生成从1开始递增的有序列表。比如我上面这个例子。会生成。</em></p>
 <ol>
 <li>第一点</li>
 <li>第二点</li>
 </ol>
-<h2>链接</h2>
-<h3>行内式</h3>
-<pre><code><span class="link_label">[曼珠沙华]</span>(<span class="link_url">http://blog.wileam.com/ "生活博客"</span>)</code></pre>
-<p><a href="http://blog.wileam.com/" title="生活博客" target="_blank">曼珠沙华</a></p>
-<h3>参考式</h3>
-<pre><code>[曼珠沙华][<span class="number">1</span>], [技术博客][<span class="number">2</span>]
-[<span class="number">1</span>]: http://blog<span class="preprocessor">.wileam</span><span class="preprocessor">.com</span>/ <span class="string">"(此处可选)生活博客"</span>
-[<span class="number">2</span>]: http://code<span class="preprocessor">.wileam</span><span class="preprocessor">.com</span>/ <span class="string">"(此处可选)技术博客"</span></code></pre>
-<p><a href="http://blog.wileam.com/" title="(此处可选)生活博客" target="_blank">曼珠沙华</a>, <a href="http://code.wileam.com/" title="(此处可选)技术博客">技术博客</a></p>
+<h2 id="-">链接</h2>
+<h3 id="-">行内式</h3>
+<pre><code>[曼珠沙华](http://blog.wileam.com/ &quot;生活博客&quot;)
+</code></pre><p><a href="http://blog.wileam.com/" title="生活博客" target="_blank">曼珠沙华</a></p>
+<h3 id="-">参考式</h3>
+<pre><code>[曼珠沙华][1], [技术博客][2]
+[1]: http://blog.wileam.com/ &quot;(此处可选)生活博客&quot;
+[2]: http://code.wileam.com/ &quot;(此处可选)技术博客&quot;
+</code></pre><p><a href="http://blog.wileam.com/" title="(此处可选)生活博客" target="_blank">曼珠沙华</a>, <a href="http://code.wileam.com/" title="(此处可选)技术博客">技术博客</a></p>
 <p>注意最下面的参考链接是直接不会出现的。</p>
-<h2>代码块 CODE BLOCKS</h2>
+<h2 id="-code-blocks">代码块 CODE BLOCKS</h2>
 <p>缩进 4spaces/1Tab。</p>
-<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"span4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"span8"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
-<h2>加粗/斜体 EMPHASIS</h2>
-<pre><code><span class="variable">**</span>加粗<span class="variable">**</span>
-<span class="variable">*斜</span>体*</code></pre>
-<p><strong>加粗</strong><br><em>斜体</em></p>
-<h2>图像 IMAGES</h2>
-<h3>行内式</h3>
-<pre><code>!<span class="link_label">[Avatar]</span>(<span class="link_url">../uploads/avatar.jpg "Optional title"</span>)</code></pre>
-<p><img src="../uploads/avatar.jpg" alt="Avatar" title="Optional title"></p>
-<h3>参考式</h3>
-<pre><code><span class="comment">!</span>[<span class="comment">Avatar</span>-<span class="comment">gavatar</span>]<span class="title">[</span><span class="comment">3</span>]
-<span class="title">[</span><span class="comment">3</span>]<span class="comment">:</span> <span class="string">.</span><span class="string">.</span><span class="comment">/uploads/avatar</span>.<span class="comment">jpg</span> <span class="comment">"(optional)avatar</span>-<span class="comment">1"</code></pre>
-<p><img src="../uploads/avatar.jpg" alt="Avatar-gavatar" title="(optional)avatar-1"></p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;span8&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="-emphasis">加粗/斜体 EMPHASIS</h2>
+<pre><code>**加粗**
+*斜体*
+</code></pre><p><strong>加粗</strong>
+<em>斜体</em></p>
+<h2 id="-images">图像 IMAGES</h2>
+<h3 id="-">行内式</h3>
+<pre><code>![Avatar](../uploads/avatar.jpg &quot;Optional title&quot;)
+</code></pre><p><img src="../uploads/avatar.jpg" alt="Avatar" title="Optional title"></p>
+<h3 id="-">参考式</h3>
+<pre><code>![Avatar-gavatar][3]
+[3]: ../uploads/avatar.jpg &quot;(optional)avatar-1&quot;
+</code></pre><p><img src="../uploads/avatar.jpg" alt="Avatar-gavatar" title="(optional)avatar-1"></p>
 <p>目前markdown还不能更改大小，如果需要设置宽高需要写html \<img\>代码。</p>
-<h2>其他</h2>
-<h3>电子邮件 email</h3>
-<pre><code><span class="tag">&lt;<span class="title">abc@gmail.com</span>&gt;</span></code></pre>
-<p><a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x61;&#98;&#99;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x61;&#98;&#99;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
-<h3>反斜杠</h3>
-<pre><code><span class="command">\*</span>我就是想显示星号不想斜体<span class="command">\*</span></code></pre>
-<p>*我就是想显示星号不想斜体*</p>
+<h2 id="-">其他</h2>
+<h3 id="-email">电子邮件 email</h3>
+<pre><code>&lt;abc@gmail.com&gt;
+</code></pre><p><a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x61;&#98;&#x63;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x61;&#98;&#x63;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h3 id="-">反斜杠</h3>
+<pre><code>\*我就是想显示星号不想斜体\*
+</code></pre><p>*我就是想显示星号不想斜体*</p>
 <hr>
-<p>reference: <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a><br>本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md</a></p>
+<p>reference: <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>
+本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/markdown-syntax.md</a></p>
 
       
     </div>
@@ -306,10 +321,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Sat Feb 15 2014 17:22:01 GMT+0800"); 
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/front-end-interview/' title='一些前端面试题'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
             var postdate = new Date("Sun Dec 22 2013 15:30:17 GMT+0800"); 
@@ -318,10 +333,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/icon-font-intro/' title='Icon Font的好处及应用'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            var postdate = new Date("Sat Feb 15 2014 17:22:01 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/front-end-interview/' title='一些前端面试题'>" + day + "</a>";
             } 
     
 
@@ -389,9 +404,9 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
     
     <li><a href="http://blog.wileam.com" target="_BLANK">Life Blog</a></li>
     
-    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu's blog</a></li>
+    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu&#39;s blog</a></li>
     
-    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf's blog</a></li>
+    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf&#39;s blog</a></li>
     
     <li><a href="http://twinsant.com/" target="_BLANK">twinsant</a></li>
     

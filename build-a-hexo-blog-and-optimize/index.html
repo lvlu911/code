@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo搭建静态博客以及优化 | Joanna's coding blog</title>
+  <title>hexo搭建静态博客以及优化 | Joanna&#39;s coding blog</title>
   <meta name="author" content="Joanna Wu">
   
-  <meta name="description" content="Joanna's coding blog，">
+  <meta name="description" content="Joanna&#39;s coding blog，">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="hexo搭建静态博客以及优化"/>
-  <meta property="og:site_name" content="Joanna's coding blog"/>
+  <meta property="og:site_name" content="Joanna&#39;s coding blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Joanna's coding blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Joanna&#39;s coding blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -34,9 +34,9 @@
   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
   <meta name="msapplication-TileColor" content="#da532c" />
-  <!--howiefh scrolltop begin-->
+  <!-- 
   <SCRIPT type=text/javascript src="/js/scrolltop.js"></SCRIPT>
-  <!--howiefh scrolltop end-->
+   -->
   <!--howiefh calendar begin-->
   <SCRIPT type=text/javascript src="/js/calendar.js"></SCRIPT>
   <!--howiefh calendar end-->  
@@ -59,7 +59,7 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Joanna's coding blog</a></h1>
+  <h1><a href="/">Joanna&#39;s coding blog</a></h1>
   <h2><a href="/">WILEAM = WILdest+drEAM.</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -78,6 +78,18 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -95,14 +107,14 @@
         <p>首先，<em>这不是一篇详尽的完整的教程</em>，只是记录大致的hexo建站流程以及自己折腾的过程。因为网上关于hexo的教程已经太多，一搜一大把。但是我还是推荐英文尚可的直接阅读hexo作者的<strong><a href="http://zespia.tw/hexo/docs/" target="_blank">文档</a></strong>，因为很多教程也只是一知半解，还是看作者文档来的比较彻底。另外，hexo源代码开源，实在不行还可以去hexo的<a href="https://github.com/tommy351/hexo" target="_blank">github</a>去提<a href="https://github.com/tommy351/hexo/issues" target="_blank">issue</a>。</p>
 <p>折腾的成果就是你现在看到的这个博客，所以这里本身就是一个demo。^_^</p>
 <p><em>p.s. hexo作者据说是台湾的一名在校学生…… T_T 努力吧少年…… </em></p>
-<h2>建站流程</h2>
-<h3>1. 安装node.js以及git</h3>
+<h2 id="-">建站流程</h2>
+<h3 id="1-node-js-git">1. 安装node.js以及git</h3>
 <a id="more"></a>
 
-<h3>2. 安装hexo</h3>
-<pre><code><span class="comment">$</span> <span class="comment">npm</span> <span class="comment">install</span> <span class="literal">-</span><span class="comment">g</span> <span class="comment">hexo</code></pre>
-<h3>3. 部署github pages</h3>
-<h4>3.1 github建立repo</h4>
+<h3 id="2-hexo">2. 安装hexo</h3>
+<pre><code>$ npm install -g hexo
+</code></pre><h3 id="3-github-pages">3. 部署github pages</h3>
+<h4 id="3-1-github-repo">3.1 github建立repo</h4>
 <p>以下二选一。</p>
 <ul>
 <li>建立一个 username.github.com 的repo，username为你的github用户名，每个用户只能有一个这样的repo，则直接发布到master分支即可。</li>
@@ -111,96 +123,106 @@
 <p>自定义域名</p>
 <p>如果你用自定义域名的话，github pages需要你建立一个名称为CNAME的文件，里面放入你的域名地址。如我的<a href="https://github.com/wileam/code/blob/gh-pages/CNAME" target="_blank">CNAME文件</a>.</p>
 <p>因为每次deploy的时候hexo都会重新生成文件，所以直接加在github是不好使的，<strong>这个文件需要放在 hexo folder/source文件夹根目录下。</strong></p>
-<h4>3.2 hexo配置deploy信息：</h4>
+<h4 id="3-2-hexo-deploy-">3.2 hexo配置deploy信息：</h4>
 <p>修改在blog根目录下的_config.yml，添加repo地址：</p>
-<pre><code><span class="method">deploy:</span>
-  <span class="method">type:</span> github
-  <span class="method">repository:</span> <span class="method">https:</span>//github.com/[username]/[reponame].git</code></pre>
-<p>References:<br>[1] <a href="https://help.github.com/categories/20/articles" target="_blank">github pages help</a><br>[2] <a href="http://zespia.tw/hexo/docs/deployment.html" target="_blank">hexo Deployment Docs</a><br>[3] 想用BAE的可以看这篇：<a href="http://jimliu.net/2013/11/20/use-hexo-on-bae/" target="_blank">在BAE上使用hexo搭建博客</a></p>
-<h3>4. hexo基本操作</h3>
+<pre><code>deploy:
+  type: github
+  repository: https://github.com/[username]/[reponame].git
+</code></pre><p>References:
+[1] <a href="https://help.github.com/categories/20/articles" target="_blank">github pages help</a>
+[2] <a href="http://zespia.tw/hexo/docs/deployment.html" target="_blank">hexo Deployment Docs</a>
+[3] 想用BAE的可以看这篇：<a href="http://jimliu.net/2013/11/20/use-hexo-on-bae/" target="_blank">在BAE上使用hexo搭建博客</a></p>
+<h3 id="4-hexo-">4. hexo基本操作</h3>
 <ul>
 <li><p>新建博客</p>
-<pre><code>$ hexo init <span class="tag">&lt;<span class="title">folder</span>&gt;</span></code></pre>
-</li>
+<pre><code>$ hexo init &lt;folder&gt;
+</code></pre></li>
 </ul>
 <p>在该目录下就建立了你的hexo blog.</p>
 <ul>
 <li><p>新建文章</p>
-<pre><code>$ hexo init <span class="tag">&lt;<span class="title">title</span>&gt;</span></code></pre>
-</li>
+<pre><code>$ hexo init &lt;title&gt;
+</code></pre></li>
 </ul>
 <p>会在source/_post新建一个名为 title.md 的文章，用喜欢的编辑器打开就可以用markdown语法写文章了。</p>
 <ul>
 <li><p>server</p>
-<pre><code><span class="variable">$ </span>hexo server</code></pre>
-</li>
+<pre><code>$ hexo server
+</code></pre></li>
 </ul>
 <p>就可以在 localhost:4000/ 查看你的博客。</p>
 <ul>
 <li><p>generate &amp; deploy</p>
-<pre><code><span class="variable">$ </span>hexo generate
-<span class="variable">$ </span>hexo deploy</code></pre>
-</li>
+<pre><code>$ hexo generate
+$ hexo deploy
+</code></pre></li>
 </ul>
 <p>或者（以下这俩效果是完全一样的）</p>
-<pre><code><span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">generate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">deploy</span>
-<span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">deploy</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">generate</code></pre>
-<h2>折腾</h2>
-<h3>插件 plugins</h3>
+<pre><code>$ hexo generate --deploy
+$ hexo deploy --generate
+</code></pre><h2 id="-">折腾</h2>
+<h3 id="-plugins">插件 plugins</h3>
 <ul>
 <li>rss生成 hexo-generator-feed</li>
 <li>sitemap hexo-generator-sitemap</li>
 </ul>
 <p>添加插件的基本操作是：</p>
-<pre><code>$ npm install <span class="tag">&lt;<span class="title">plugin-name</span>&gt;</span> --save
-$ npm update</code></pre>
-<p>然后修改blog根目录下的_config.yml，添加：</p>
-<pre><code><span class="comment">plugins:</span>
-<span class="literal">-</span> <span class="comment">plugin</span>-<span class="comment">name</code></pre>
-<p>插件部分详见：<a href="https://github.com/tommy351/hexo/wiki/Plugins" target="_blank">https://github.com/tommy351/hexo/wiki/Plugins</a></p>
-<h3>组件 widgets</h3>
+<pre><code>$ npm install &lt;plugin-name&gt; --save
+$ npm update
+</code></pre><p>然后修改blog根目录下的_config.yml，添加：</p>
+<pre><code>plugins:
+- plugin-name
+</code></pre><p>插件部分详见：<a href="https://github.com/tommy351/hexo/wiki/Plugins" target="_blank">https://github.com/tommy351/hexo/wiki/Plugins</a></p>
+<h3 id="-widgets">组件 widgets</h3>
 <ul>
 <li>关于 about me [1]</li>
 <li>日历 calendar [2]</li>
 <li>返回页面顶部 Scrolltop [2]</li>
 <li>微博秀 weibo show [3]</li>
 </ul>
-<h3>其他调整</h3>
+<h3 id="-">其他调整</h3>
 <ul>
 <li>去掉addthis和Disqus</li>
 <li>添加多说 [1]</li>
-<li>添加百度统计 [1] 和Google Analytics<br>原先一直用GA然后现在两个都用是打算对比一下。。</li>
+<li>添加百度统计 [1] 和Google Analytics
+原先一直用GA然后现在两个都用是打算对比一下。。</li>
 <li>自动附上博客文章源码的github地址</li>
 <li><strong>添加social icons</strong></li>
 <li>样式微调</li>
 <li>字体微调 [1]</li>
 </ul>
-<p>优化调整参考了：<br>[1] <a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">jim-liu的优化版light theme</a><br>[2] <a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">净土howiefh</a><br>[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
-<h2>其他</h2>
-<h3>源代码管理</h3>
-<p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。<br>本博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
-<h3>发布显示更多</h3>
+<p>优化调整参考了：
+[1] <a href="https://github.com/LiuJi-Jim/hexo-theme-light" target="_blank">jim-liu的优化版light theme</a>
+[2] <a href="https://github.com/howiefh/howiefh.github.io/" target="_blank">净土howiefh</a>
+[3] <a href="http://app.weibo.com/tool/weiboshow" target="_blank">微博开放平台</a></p>
+<h2 id="-">其他</h2>
+<h3 id="-">源代码管理</h3>
+<p>由于我用的github pages所以发布是会发布到gh-pages分支，而我用这个博客repo的master分支管理整个博客的源代码。这样就可以轻松的实现不同电脑的同步了。
+本博客的源代码：<a href="https://github.com/wileam/code/" target="_blank">https://github.com/wileam/code/</a></p>
+<h3 id="-">发布显示更多</h3>
 <p>在你觉得适合的位置插入</p>
-<pre><code><span class="comment">&lt;!-- more --&gt;</span></code></pre>
-<p>就会将之前的部分生成摘要。点击”阅读全文“才会看到全文。</p>
-<h3>YAML</h3>
+<pre><code>&lt;!-- more --&gt;
+</code></pre><p>就会将之前的部分生成摘要。点击”阅读全文“才会看到全文。</p>
+<h3 id="yaml">YAML</h3>
 <p>hexo文章的头部文件是用<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">YAML</a>来写的，比如文章要同时标记多个tags，就需要用</p>
-<pre><code><span class="attribute">tags</span>: <span class="string">[tag1, tag2]</span></code></pre>
-<p>或者</p>
-<pre><code><span class="comment">tags:</span>
-<span class="literal">-</span> <span class="comment">tag1</span>
-<span class="literal">-</span> <span class="comment">tag2</code></pre>
-<p>这样的语法来写，详见YAML的<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">wikipedia</a>.</p>
-<h3>ejs和stylus</h3>
+<pre><code>tags: [tag1, tag2]
+</code></pre><p>或者</p>
+<pre><code>tags:
+- tag1
+- tag2
+</code></pre><p>这样的语法来写，详见YAML的<a href="http://en.wikipedia.org/wiki/YAML" target="_blank">wikipedia</a>.</p>
+<h3 id="ejs-stylus">ejs和stylus</h3>
 <p>hexo是用的ejs和stylus。同样如果习惯用LESS之类也可以装相应的plugins.</p>
-<p>ejs是embedded javascript，从js文件中抽取出html结构，使代码结构清晰简洁易读。(其实我还不太明白所以没怎么改ejs……)<br>文档存备用：<a href="https://code.google.com/p/embeddedjavascript/w/list" target="_blank">https://code.google.com/p/embeddedjavascript/w/list</a></p>
-<p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。<br>同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
-<h3>markdown</h3>
+<p>ejs是embedded javascript，从js文件中抽取出html结构，使代码结构清晰简洁易读。(其实我还不太明白所以没怎么改ejs……)
+文档存备用：<a href="https://code.google.com/p/embeddedjavascript/w/list" target="_blank">https://code.google.com/p/embeddedjavascript/w/list</a></p>
+<p>stylus是和less/sass类似的一个css processor，比原生的css更简洁一些。
+同样文档存备用：<a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a></p>
+<h3 id="markdown">markdown</h3>
 <p>参见<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">markdown syntax</a>，或者我之前的博客，<a href="http://code.wileam.com/markdown-syntax/">markdown语法</a></p>
-<h3>疑似bug</h3>
+<h3 id="-bug">疑似bug</h3>
 <p>如果更新了css文件，那么需要把public的css文件删除，然后</p>
-<pre><code><span class="comment">$</span> <span class="comment">hexo</span> <span class="comment">deploy</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">generate</code></pre>
-<p>这样才会重新生成新的文件。我试了好几次都是这样，不知道是不是bug……</p>
+<pre><code>$ hexo deploy --generate
+</code></pre><p>这样才会重新生成新的文件。我试了好几次都是这样，不知道是不是bug……</p>
 <hr>
 <p>本文源码：<a href="https://github.com/wileam/code/blob/master/source/_posts/build-a-hexo-blog-and-optimize.md" target="_blank">https://github.com/wileam/code/blob/master/source/_posts/build-a-hexo-blog-and-optimize.md</a></p>
 
@@ -334,10 +356,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/build-a-hexo-blog-and-optimize/' title='hexo搭建静态博客以及优化'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Sat Feb 15 2014 17:22:01 GMT+0800"); 
+            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/front-end-interview/' title='一些前端面试题'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
             } 
     
             var postdate = new Date("Sun Dec 22 2013 15:30:17 GMT+0800"); 
@@ -346,10 +368,10 @@ var cale = new Calendar("idCalendar", {
                 this.Days[day].innerHTML = "<a href='/icon-font-intro/' title='Icon Font的好处及应用'>" + day + "</a>";
             } 
     
-            var postdate = new Date("Wed Dec 11 2013 01:12:44 GMT+0800"); 
+            var postdate = new Date("Sat Feb 15 2014 17:22:01 GMT+0800"); 
             if (postdate.getFullYear() == this.Year && postdate.getMonth()+1 == this.Month) { 
                 var day = postdate.getDate();
-                this.Days[day].innerHTML = "<a href='/markdown-syntax/' title='markdown语法'>" + day + "</a>";
+                this.Days[day].innerHTML = "<a href='/front-end-interview/' title='一些前端面试题'>" + day + "</a>";
             } 
     
 
@@ -417,9 +439,9 @@ $("idCalendarNext").onclick = function(){ cale.NextMonth(); }
     
     <li><a href="http://blog.wileam.com" target="_BLANK">Life Blog</a></li>
     
-    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu's blog</a></li>
+    <li><a href="http://jimliu.net/" target="_BLANK">Jim-Liu&#39;s blog</a></li>
     
-    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf's blog</a></li>
+    <li><a href="http://icyleaf.com/" target="_BLANK">icyleaf&#39;s blog</a></li>
     
     <li><a href="http://twinsant.com/" target="_BLANK">twinsant</a></li>
     
